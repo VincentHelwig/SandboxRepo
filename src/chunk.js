@@ -15,7 +15,7 @@ function chunk(items, size) {
     throw new TypeError('chunk expects an array of items');
   }
   if (!Number.isInteger(size) || size <= 0) {
-    throw new RangeError(`chunk expects size to be a positive integer, got ${size}`);
+    throw new RangeError(`chunk expects size to be a positive integer, got ${String(size)}`);
   }
   const chunks = [];
   for (let start = 0; start < items.length; start += size) {

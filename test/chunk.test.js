@@ -39,6 +39,7 @@ test('throws a RangeError when size is not a positive integer', () => {
   assert.throws(() => chunk([1, 2], Infinity), RangeError);
   assert.throws(() => chunk([1, 2], '2'), RangeError);
   assert.throws(() => chunk([1, 2], undefined), RangeError);
+  assert.throws(() => chunk([1, 2], Symbol('size')), RangeError);
 });
 
 test('throws a TypeError when not given an array', () => {
